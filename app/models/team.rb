@@ -3,4 +3,8 @@ class Team < ActiveRecord::Base
   def init
     self.rating ||= 1200
   end
+
+  def score
+    Random.new(Time.now.to_i)
+  end
 end
